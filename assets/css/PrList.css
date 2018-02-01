@@ -1,0 +1,493 @@
+.flex-group {
+    margin: auto;                           /*определение флекс бокса*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.flex-container {
+    flex: 0 1 auto;
+    display: flex;
+    display: -moz-flex;
+    flex-flow: row wrap;
+    align-items: space-around;
+    align-content: flex-start;
+    padding: 0;
+    margin: 2%;
+    list-style: none;
+}
+
+.main li{
+    position: relative;
+    border: solid red 1px;      /*размер карточки главного товара*/
+    width: 600px;
+    height: 60%;
+}
+
+.slave li{
+    border: black solid 2px;
+    width: 325px;                   /*размер остальных карточек*/
+    height: 160px;
+}
+
+.flex-item {
+    flex: 0 1 auto;
+    text-align: center;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+
+}
+
+.discount{
+    width: 12%;
+    height: 15%;
+    background-color: yellow;           /*положение и размера окна скидки*/
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+}
+.pic{
+    height: 100%;
+}
+
+.main img{
+    position: absolute;
+    top: 10%;                           /*положение картинки*/
+    right: 35%;
+    width: 35%;
+}
+
+.old_price{
+    position: absolute;                   /*старая цена*/
+    top: 65%;
+    left: 3%;
+    font-size: 26px;
+}
+
+.price{
+    position: absolute;
+    top: 67%;                                   /*цена*/
+    right: 28%;
+    width: 95%;
+    height: 1%;
+}
+
+.name_shop{
+    position: absolute;
+    top: 67%;
+    right: 5%;
+}
+
+span:before {                                   /*диагональное зачеркивание*/
+    font-size: 10px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    margin: -1px 0 0;
+    background: green;
+    transform: rotate(7deg);
+}
+
+.line{                                                  /*первая линия*/
+    width: 95%;
+    height: 1%;
+    border-top: dashed 1px red;
+    position: absolute;
+    top: 75%;
+    left: 2%;
+}
+
+
+.line_2{                                        /*вторая линия*/
+    width: 95%;
+    height: 1%;
+    border-top: dashed 1px red;
+    position: absolute;
+    top: 91%;
+    left: 2%;
+}
+
+.description{
+    position: absolute;                     /*описание товара*/
+    top: 76%;
+    font-size: 24px;
+}
+
+.lower{
+    font-size: 20px;
+    position: absolute;                     /*подвал карточки*/
+    top: 93%;
+    left: 5%;
+}
+
+.vertical_lin{
+    width: 40%;
+    margin: 0 10px;
+    font-size: 20px;
+    position: absolute;             /*информация о доставке и вертикальные линии*/
+    top: 93%;
+    right: 30%;
+    border-right: green solid 2px;
+    border-left: solid green 2px;
+}
+
+.timer{
+    font-size: 20px;
+    position: absolute;               /*таймер*/
+    top: 93%;
+    right: 10%;
+}
+
+/******hover****/
+
+.main li:hover{
+    border: 3px solid green;
+}
+
+.first_card:hover{
+    border: 3px solid red;
+}
+.second_card:hover{
+    border: 3px solid red;
+}
+.third_card:hover{
+    border: 3px solid red;
+}
+.four_card:hover{
+    border: 3px solid red;
+}
+
+
+/*////// оформление карточек slave /////*/
+
+.flex-container_slave{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+
+
+.flex-container_slave li{
+    list-style-type: none;
+    border: black solid 1px;
+    padding: 0;
+    margin: 2%;
+    width: 45%;
+    height: 28%;
+    position: relative;
+}
+
+.discount_slave{
+    width: 15%;
+    height: 25%;
+    background-color: yellow;           /*положение и размера окна скидки*/
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.flex-container_slave img{
+    position: absolute;            /*указываем абсолют ребенку maybe it is work??*/
+    width: 25%;
+    right: 7%;
+    top: 5%;
+}
+
+.flex-container_slave .price{
+    font-size: 16px;
+    left: 32%;
+    top: 68%;
+}
+
+.flex-container_slave .old_price{
+    font-size: 22px;
+    top: 65%;
+}
+
+.flex-container_slave .description{
+    font-size: 15px;
+    top: 25%;
+    left: 5%;
+}
+
+.flex-container_slave .line{
+    top: 80%;
+}
+
+.flex-container_slave .lower{
+    top: 85%;
+    left: 35%;
+}
+
+.second_card img{
+    width: 35%;
+}
+
+.second_card .vertical_lin{
+    border-left: none;
+    font-size: 14px;
+    width: 45%;
+    left: 2%;
+    top: 83%;
+}
+
+.second_card .lower{
+    font-size: 14px;
+    left: 65%;
+    top: 83%;
+}
+
+.third_card img{
+    width: 35%;
+    top: 1%;
+    right: 1%;
+}
+
+.third_card .lower{
+    text-align: center;
+    width: 75%;
+    left: 15%;
+}
+
+.four_card .lower{
+    top: 83%;
+    left: 2%;
+    font-size: 14px;
+}
+
+.four_card .vertical_lin{
+    font-size: 14px;
+    width: 48%;
+    text-align: center;
+    right: 21%;
+    top: 83%;
+}
+
+.four_card .timer{
+    top: 83%;
+    font-size: 14px;
+}
+
+/**********медиа запросы******/
+
+@media (max-width: 1290px) and (min-width: 1200px){
+
+    .flex-container_slave .price{
+        font-size: 16px;
+    }
+    .flex-container_slave .name_shop{
+        font-size: 18px;
+        top: 55%;
+    }
+    .flex-container_slave .old_price{
+        font-size: 18px;
+    }
+
+    .discount_slave{
+        width: 16%;
+        height: 16%;
+    }
+}
+@media  (max-width: 1200px) and (min-width: 992px) {
+    .main  {
+        width: 400px;
+    }
+
+    .lower {
+        font-size: 14px;
+    }
+
+    .vertical_lin {
+        font-size: 14px;
+    }
+
+    .timer {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 18px;
+        right: 20%;
+        top: 66%;
+    }
+
+    .name_shop {
+        font-size: 14px;
+    }
+
+    .flex-container_slave .price {
+        font-size: 14px;
+        left: 28%;
+    }
+
+    .third_card .price {
+        left: 33%;
+    }
+
+    .flex-container_slave .description {
+        top: 33%;
+    }
+
+    .flex-container_slave .old_price {
+        font-size: 18px;
+    }
+
+    .discount_slave {
+        width: 13%;
+        height: 15%;
+        font-size: 12px;
+    }
+
+    .four_card .vertical_lin {
+        width: 45%;
+        font-size: 12px;
+    }
+
+    .second_card .vertical_lin {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+
+    .flex-group{
+        flex-wrap: wrap;
+    }
+
+
+    .main{
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        margin: 0;
+        left: 2.5%;
+    }
+
+    .flex-container_slave{
+        position: absolute;
+        top: 45%;
+        width: 90%;
+        height: 70%;
+        right: 11%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 630px) {
+    .flex-group {
+        flex-wrap: wrap;
+    }
+
+    .main {
+        width: 95%;
+        margin-left: 7%;
+    }
+
+    .flex-container_slave {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .flex-container_slave .first_card {
+        width: 95%;
+    }
+
+    .flex-container_slave .second_card {
+        width: 95%;
+    }
+
+    .flex-container_slave .third_card {
+        width: 95%;
+    }
+
+    .flex-container_slave .four_card {
+        width: 95%;
+    }
+
+    .name_shop {
+        right: 40%;
+    }
+
+    .first_card img {
+        width: 20%;
+    }
+
+    .second_card img {
+        width: 25%;
+    }
+
+    .discount_slave {
+        width: 10%;
+    }
+}
+    @media (max-width: 630px) and (min-width: 320px){
+        .name_shop{
+            margin-right: -25%;
+        }
+
+        .price{
+            position: absolute;
+            top: 67%;                                   /*цена*/
+            right: 5%;
+            width: 95%;
+            height: 1%;
+        }
+
+
+        .flex-group{
+            flex-wrap: wrap;
+        }
+
+        .main{
+            width: 95%;
+            margin-left: 7%;
+        }
+
+        .flex-container_slave{
+            flex-direction: column;
+            width: 95%;
+        }
+        .flex-container_slave .first_card{
+            width: 95%;
+        }
+        .flex-container_slave .second_card{
+            width: 95%;
+        }
+        .flex-container_slave .third_card{
+            width: 95%;
+        }
+        .flex-container_slave .four_card{
+            width: 95%;
+        }
+
+        .name_shop{
+            right: 40%;
+        }
+
+        .first_card img{
+            width: 20%;
+        }
+        .second_card img{
+            width: 25%;
+        }
+
+        .discount_slave{
+            width: 10%;
+        }
+    }
+
+@-moz-document url-prefix() {
+    .selector {
+        color:lime;
+    }
+}
